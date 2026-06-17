@@ -1,0 +1,16 @@
+assemble:
+  - include:
+      - "**/*.js"
+      - package.json
+energy-data-provider-user-agent:
+  .serviceAddress: localhost:3001
+  .serviceScheme: http
+  name: Energy Data Provider OAuth Application User Agent
+  scopes:
+    - Liferay.Headless.Admin.User.everything.read
+  type: oAuthApplicationUserAgent
+energy-data-provider-object-entry-manager:
+    name: Energy data provider Object entry manager
+    oAuth2ApplicationExternalReferenceCode: energy-data-provider-user-agent
+    resourcePath: /energy/objectEntryManager
+    type: objectEntryManager
